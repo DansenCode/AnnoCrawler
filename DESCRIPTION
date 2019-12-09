@@ -1,0 +1,11 @@
+Package: AnnoCrawler
+Type: Package
+Title: Annotations Enrichment Analysis
+Version: 0.1.0
+Author: Daniel Hornburg
+Maintainer: Daniel Hornburg <daniel.dh.hornburg@gmail.com>
+Description: Perform annotation enrichment analysis in omics data sets.
+License: GPL3
+Depends: R (>= 3.1.0)
+Encoding: UTF-8
+LazyData: true
