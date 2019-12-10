@@ -1,3 +1,15 @@
+#' @title 1D Annoation Enrichment
+#'
+#' @description 1D Annoation Enrichment function that takes as an input  ";" separated identifiers and annotations
+#'
+#' @param OneDeAnnotationDF
+#'
+#' @param quantities
+#'
+#' @return DataOut
+#'
+#' @export ODE
+
 #########################################################################################
 ################################
 #### function to calculate 1 D annotation enrichment
