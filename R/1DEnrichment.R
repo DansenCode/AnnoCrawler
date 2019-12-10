@@ -1,6 +1,6 @@
 #' @title 1D Annoation Enrichment
 #'
-#' @description 1D Annoation Enrichment function that takes as an input  ";" separated identifiers and annotations
+#' @description 1D Annoation Enrichment function that takes as an input  ";" separated identifiers and annotations.
 #'
 #' @param OneDeAnnotationDF
 #'

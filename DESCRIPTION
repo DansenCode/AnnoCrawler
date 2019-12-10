@@ -9,4 +9,4 @@ License: GPL3
 Depends: R (>= 3.1.0)
 Encoding: UTF-8
 LazyData: true
-Imports: tidyverse
+Imports: stats
