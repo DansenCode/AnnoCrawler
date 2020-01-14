@@ -11,7 +11,7 @@ devtools::install_github("DansenCode/AnnoCrawler")
 
 # Motivation
 
-Interrogating biological data on a feature by feature level is very usefull to get a granular understanding of the underlying biology. Sometimes, a higher level understanding can be usfull to condense hundred or thousands of fetures based on pre defined common properties. Moreover, while individual fetures can show small, insignificant trends, aggregates evidence, e.g. from hundreds of fetures involved in the same pathway can provide significant evidence of regulation. The purpose of that package is to providsew two simple and usfull enrichment strategies for common biological data sets.
+Interrogating biological data on a feature by feature level is very usefull to get a granular understanding of the underlying biology. Sometimes, high-level understanding can be usfull to condense hundred or thousands of features based on predefined common properties. Moreover, while individual features can show small, insignificant trends, aggregates evidence, e.g. from hundreds of features involved in the same pathway can provide significant evidence for regulation. The purpose of that package is to providse two simple and usfull enrichment strategies for common biological data sets.
 
 <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-13-S16-S12>
 
