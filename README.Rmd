@@ -24,7 +24,8 @@ The goal of AnnoCrawler is to ...
 You can install the released version of AnnoCrawler from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("AnnoCrawler")
+install.packages("devtools")
+devtools::install_github("DansenCode/AnnoCrawler")
 ```
 
 ## Example
