@@ -1,5 +1,23 @@
+  
+#' @title Hyperparametric test
+#'
+#' @description Hyperparametric test for enrichment analysis that takes as an input  ";" separated identifiers and annotations.
+#'
+#' @param data
+#'
+#' @param AnnoCol
+#'
+#' @param SubSelectionCol
+#'
+#' @param MinCatSize
+#'
+#' @return DataOut
+#'
+#' @export HypPara
+
+
 #### function to calculate fisher exact test enrichments
-FishR = function(data = NULL, # data frame (wide) with features, subselection and matched categorical annotations
+HypPara = function(data = NULL, # data frame (wide) with features, subselection and matched categorical annotations
                           AnnoCol = NULL, # Names of columns in "data" that contain annotations
                           SubSelectionCol = NULL, # Name of columns in "data" that contain logical selection or not
                           MinCatSize = NULL # set a value for minimal category size to be considered
@@ -73,7 +91,7 @@ FishR = function(data = NULL, # data frame (wide) with features, subselection an
   FisherOutDF$Log2_Odds[which(FisherOutDF$Log2_Odds == -Inf)] = min(DynamicRange)
   FisherOutDF$Log2_Odds[which(FisherOutDF$Log2_Odds == Inf)] = max(DynamicRange)
   
-  return(FisherOutDF)
+  return(DataOut)
   
 }
 #########################################################################################
