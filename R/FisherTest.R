@@ -1,5 +1,4 @@
-  
-#' @title Hyperparametric test
+#' @title Hyperparametric Test
 #'
 #' @description Hyperparametric test for enrichment analysis that takes as an input  ";" separated identifiers and annotations.
 #'
@@ -11,7 +10,7 @@
 #'
 #' @param MinCatSize
 #'
-#' @return DataOut
+#' @return FisherOutDF
 #'
 #' @export HypPara
 
@@ -91,7 +90,7 @@ HypPara = function(data = NULL, # data frame (wide) with features, subselection 
   FisherOutDF$Log2_Odds[which(FisherOutDF$Log2_Odds == -Inf)] = min(DynamicRange)
   FisherOutDF$Log2_Odds[which(FisherOutDF$Log2_Odds == Inf)] = max(DynamicRange)
   
-  return(DataOut)
+  return(FisherOutDF)
   
 }
 #########################################################################################
