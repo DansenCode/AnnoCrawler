@@ -31,7 +31,10 @@ ODE()
 # How to use it
 
 ## Example Data
-You can download proteome annotations for various species here: <https://datashare.biochem.mpg.de/s/qe1IqcKbz2j2Ruf>
+You can download proteome annotations for various species here: <https://datashare.biochem.mpg.de/s/qe1IqcKbz2j2Ruf?path=%2FPerseusAnnotation>
+
+
+
 Thank you!
 # Further Reading
 
