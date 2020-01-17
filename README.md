@@ -5,6 +5,7 @@ This package allows to identfy enriched annotations based in Fisher's exact test
 ``` r
 # install.packages("devtools")
 devtools::install_github("DansenCode/AnnoCrawler")
+library("AnnoTools")
 ```
 
 -----
@@ -16,8 +17,16 @@ Interrogating biological data on a feature by feature level is very usefull to g
 <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-13-S16-S12>
 
 ## Fisher's test
+``` r
+# call hypergeometric test function
+HypPara()
+```
 
 ## 1D Enrichment
+``` r
+# call 1D enrichment function
+ODE()
+```
 
 # How to use it
 
