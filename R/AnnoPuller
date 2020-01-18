@@ -1,6 +1,20 @@
+#' @title Anno Puller
+#'
+#' @description Allows to match annotations to dataframe
+#'
+#' @param InputVector
+#'
+#' @param AnnoID
+#'
+#' @param AnnoAnno
+#'
+#' @return OutVector
+#'
+#' @export AnnoPuller
+
 #########################################################################################
 ################################
-AnnoPuller2 = function(InputVector = NULL,
+AnnoPuller = function(InputVector = NULL,
                        AnnoID = NULL,
                        AnnoAnno = NULL){
   ## InputVector is a vector of that is supposed to be interogated for matching annotations. multiple ids (e.g. protei groups) should be separeted by ";"
