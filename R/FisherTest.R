@@ -38,7 +38,7 @@ HypPara = function(data = NULL, # data frame (wide) with features, subselection 
   ## Loop for counting categories across all annotations
   for(k in AnnoCol){
     # find unique
-    Categories = str_split(data[,k],";")
+    Categories = str_split(as.matrix(data[, k]), ";")
     UniqueCategories = unique(unlist(Categories))
     TempDF = data.frame(matrix(data = NA, nrow = length(UniqueCategories), ncol = 0))
     
