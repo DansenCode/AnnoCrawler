@@ -1,3 +1,23 @@
+#' @title AnnoPuller2
+#'
+#' @description IpseLorum
+#'
+#' @param InputVector
+#'
+#' @param InputVectorSep
+#'
+#' @param AnnoID
+#'
+#' @param AnnoIDSep
+#'
+#' @param AnnoAnno
+#'
+#' @param OutputSep
+#'
+#' @return OutVector
+#'
+#' @export AnnoPuller2
+
 #########################################################################################
 ################################
 AnnoCount = function(data = NULL,separator = ";"){
