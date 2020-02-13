@@ -1,6 +1,6 @@
-#' @title Annotation Puller
+#' @title AnnoPuller2
 #'
-#' @description IpseLorum
+#' @description Allows to match annotations to dataframe
 #'
 #' @param InputVector
 #'
@@ -17,6 +17,7 @@
 #' @return OutVector
 #'
 #' @export AnnoPuller2
+
 
 #########################################################################################
 ################################
