@@ -21,14 +21,14 @@ ODE = function(OneDeAnnotationDF = NULL,
   # accepts now also multiple entries per element if separated by ";"
   DataOut = as.data.frame(matrix(data = NA,nrow = 0,ncol = 0))
   OneDeAnnotationDF = as.data.frame(OneDeAnnotationDF)
-  r = 1
+  r = 0
   
   for(k in colnames(OneDeAnnotationDF)[colnames(OneDeAnnotationDF)!=quantities]){
     categories = unique(unlist(sapply(OneDeAnnotationDF[,k],function(x){str_split(x,";")})))
     categories = categories[!is.na(categories)]
     categories = categories[!categories == ""] ## all unique annotaions in a given category
     
-    AnnoList = sapply(OneDeAnnotationDF[,k],function(x){str_split(x,";")[[1]]}) ## all unique and redundant annotaions in a given category
+    AnnoList = lapply(OneDeAnnotationDF[,k],function(x){str_split(x,";",simplify = FALSE)[[1]]}) ## all unique and redundant annotaions in a given category
     # loop per column
     for(i in categories){
       Rest = sapply(AnnoList, function(x){sum(x %in% i) == 0 })
@@ -37,6 +37,8 @@ ODE = function(OneDeAnnotationDF = NULL,
       x = OneDeAnnotationDF[SelectedCategory,quantities]
       y = OneDeAnnotationDF[Rest,quantities]
       
+      r = r + 1
+      if((length(x) > 0 ) & (length(y) > 0)) {
       ## wilcox test and output
       wilcox.out = wilcox.test(x = x,y = y, alternative = "two.sided")
       
@@ -65,7 +67,8 @@ ODE = function(OneDeAnnotationDF = NULL,
       DataOut[r,"scores"] = ScoreOut
       DataOut[r,"SelectionSize"] = sum(SelectedCategory)
       
-      r = r + 1
+      }
+      
     }
   }
   # adjust p value
