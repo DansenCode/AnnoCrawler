@@ -85,11 +85,12 @@ HypPara = function(data = NULL, # data frame (wide) with features, subselection 
   #flag infinite odds and set to max value
   FisherOutDF[,"Log2_OddsFinite"] = is.finite(FisherOutDF[,"Log2_Odds"])
   
-  # set infinite to maximum
+  # set infinite to maximum, omit if no finite
   DynamicRange = FisherOutDF$Log2_Odds[is.finite(FisherOutDF[,"Log2_Odds"])]
-  FisherOutDF$Log2_Odds[which(FisherOutDF$Log2_Odds == -Inf)] = min(DynamicRange)
-  FisherOutDF$Log2_Odds[which(FisherOutDF$Log2_Odds == Inf)] = max(DynamicRange)
-  
+   if(length(DynamicRange) > 0){
+    FisherOutDF$Log2_Odds[which(FisherOutDF$Log2_Odds == -Inf)] = min(DynamicRange)
+    FisherOutDF$Log2_Odds[which(FisherOutDF$Log2_Odds == Inf)] = max(DynamicRange)
+    }
   return(FisherOutDF)
   
 }
